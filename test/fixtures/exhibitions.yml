@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  exhibition_by: MyString
+  address: MyString
+  from_data: MyString
+  to_date: MyString
+
+two:
+  title: MyString
+  exhibition_by: MyString
+  address: MyString
+  from_data: MyString
+  to_date: MyString

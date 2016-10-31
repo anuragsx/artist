@@ -32,7 +32,11 @@ class HomeController < ApplicationController
 
 	def fanwall
 		@page = Page.find_by_title(params[:action])
-	end		
+	end	
+
+	def latest_news
+		@news = News.all
+	end	
 
   private
 

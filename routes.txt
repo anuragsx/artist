@@ -1,0 +1,38 @@
+                  Prefix Verb   URI Pattern                    Controller#Action
+              news_index GET    /news(.:format)                news#index
+                         POST   /news(.:format)                news#create
+                new_news GET    /news/new(.:format)            news#new
+               edit_news GET    /news/:id/edit(.:format)       news#edit
+                    news GET    /news/:id(.:format)            news#show
+                         PATCH  /news/:id(.:format)            news#update
+                         PUT    /news/:id(.:format)            news#update
+                         DELETE /news/:id(.:format)            news#destroy
+                   pages GET    /pages(.:format)               pages#index
+                         POST   /pages(.:format)               pages#create
+                new_page GET    /pages/new(.:format)           pages#new
+               edit_page GET    /pages/:id/edit(.:format)      pages#edit
+                    page GET    /pages/:id(.:format)           pages#show
+                         PATCH  /pages/:id(.:format)           pages#update
+                         PUT    /pages/:id(.:format)           pages#update
+                         DELETE /pages/:id(.:format)           pages#destroy
+        new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
+            user_session POST   /users/sign_in(.:format)       devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy
+           user_password POST   /users/password(.:format)      devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)  devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format) devise/passwords#edit
+                         PATCH  /users/password(.:format)      devise/passwords#update
+                         PUT    /users/password(.:format)      devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)        devise/registrations#cancel
+       user_registration POST   /users(.:format)               devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)       devise/registrations#new
+  edit_user_registration GET    /users/edit(.:format)          devise/registrations#edit
+                         PATCH  /users(.:format)               devise/registrations#update
+                         PUT    /users(.:format)               devise/registrations#update
+                         DELETE /users(.:format)               devise/registrations#destroy
+                   admin GET    /admin(.:format)               admin#index
+                   store GET    /store(.:format)               home#store
+                    tour GET    /tour(.:format)                home#tour
+                 fanwall GET    /fanwall(.:format)             home#fanwall
+             latest_news GET    /latest_news(.:format)         home#latest_news
+                    root GET    /                              home#index

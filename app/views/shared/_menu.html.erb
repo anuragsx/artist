@@ -39,6 +39,7 @@
                                                 <%if current_user.present? and current_user.email == "anuraag.jpr@gmail.com"%>
                                                 <ul>
                                                   <li><%= link_to "Pages", pages_path %></li>
+                                                  <li><%= link_to "News", news_index_path %></li>
                                                 </ul>
                                                 <% else %>
                                                   <ul>

@@ -32,6 +32,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
 
 
       t.timestamps null: false
+      User.create(email: 'anuraag.jprr@gmail.com', password: 'admin123', password_confirmation: 'admin123')
     end
 
     add_index :users, :email,                unique: true

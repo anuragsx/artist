@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <h1><%= params[:action] %> News</h1>
+  </div>
+</div>
+<div class="row topsp">
+  <div class="loginform">
+  <%# @url = params[:action]=='new' %>
+  <%= form_for @news, html: { multipart: true } do |f| %>
+      <% if news.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(news.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+          <ul>
+          <% news.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>    
+      <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-30">
+      
+        <%= f.file_field :image %>    
+
+        <div class="inputxt">Title :</div>
+          <%= f.text_field :title, autofocus: true %>
+        <br class="clear" />
+
+        <div class="inputxt">Description :</div>
+          <%= f.text_area :description, size: "35x10", autofocus: true %>
+        <br class="clear" />
+
+        <div class="inputxt">YouTube:</div>
+          <%= f.text_field :youtube_url, autofocus: true %>
+        <br class="clear" />
+      
+        <%= f.submit %>        
+      </div>
+    <% end -%>
+  </div>
+</div>
