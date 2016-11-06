@@ -79,7 +79,7 @@
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {border:none;}
 	
-.navbar-collapse {padding-left:0; padding-right:0; background:#2e95c5;}	
+.navbar-collapse {padding-left:0px; padding-right:0; background:#2e95c5;}	
 
 .navbar-collapse > .nav > div > ul > li {float:none; line-height:40px; border-bottom:1px solid #ffffff;}
 
@@ -143,7 +143,7 @@
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {border:none;}
 	
-.navbar-collapse {padding-left:0; padding-right:0; background:#2e95c5;}	
+.navbar-collapse {padding-left:0px; padding-right:0; background:#2e95c5;}	
 
 .navbar-collapse > .nav > div > ul > li {float:none; line-height:40px; border-bottom:1px solid #108f7d!important;}
 
@@ -217,7 +217,7 @@
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {border:none;}
 	
-.navbar-collapse {padding-left:0; padding-right:0; background:#2e95c5;}	
+.navbar-collapse {padding-left:0px; padding-right:0; background:#2e95c5;}	
 
 .navbar-collapse > .nav > div > ul > li {float:none; line-height:40px; border-bottom:1px solid #dddddd!important;}
 
