@@ -168,7 +168,7 @@ margin:0 auto; animation:spinsun 80s infinite linear; z-index:9999;}
 
 .logo {display:inline-block;}
 
-.wrapper > div.logomain {position:absolute; width:100%; top:; left:0px; text-align:center; z-index:9999999; margin:250px auto 0;}
+.wrapper > div.logomain {position:absolute; width:100%; top:0px; left:0px; text-align:center; z-index:9999999; margin:250px auto 0;}
 
 nav {text-align:center;}
 
