@@ -6,5 +6,6 @@ class CreatePages < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    User.create(email: 'anuraag.jprr@gmail.com', password: 'admin123', password_confirmation: 'admin123')
   end
 end
