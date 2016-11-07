@@ -2,33 +2,33 @@
   		<div class="row">  
             	<div class="imgarea">
                   <a href="#">
-                    <img src="/assets/img1.jpg" alt="" />
+                    <img src="<%= asset_path('img1.jpg') %>" alt="" />
                     <div class="imgdesc">Artist </div>
                   </a>
                 </div>	 
             	<div class="imgarea">
                   <a href="#">
-                    <img src="/assets/img2.jpg" alt="" />
+                    <img src="<%= asset_path('img2.jpg') %>" alt="" />
                     <div class="imgdesc">News </div>
                   </a>
                 </div>             
             	<div class="imgarea">
                   <a href="#">
-                    <img src="/assets/img3.jpg" alt="" />
+                    <img src="<%= asset_path('img3.jpg') %>" alt="" />
                     <div class="imgdesc">Music </div>
                   </a>
                 </div>            
             	<div class="imgarea">
                   <a href="#">
-                    <img src="/assets/img4.jpg" alt="" />
+                    <img src="<%= asset_path('img4.jpg') %>" alt="" />
                     <div class="imgdesc">Videos </div>
                   </a>
                 </div>            
             	<div class="imgarea">
-                  <%= link_to '<img src="/assets/img5.jpg" alt="" /><div class="imgdesc">Tour </div>'.html_safe, tour_path%>              
+                  <%= link_to '<img src="<%= asset_path("img5.jpg") %>" alt="" /><div class="imgdesc">Tour </div>'.html_safe, tour_path%>              
                 </div>            
             	<div class="imgarea">
-                  <%= link_to '<img src="/assets/img6.jpg" alt="" /><div class="imgdesc">Store </div>'.html_safe, store_path%>
+                  <%= link_to '<img src="<%= asset_path("img6.jpg") %>" alt="" /><div class="imgdesc">Store </div>'.html_safe, store_path%>
               </div>  
         </div>
     </div>
