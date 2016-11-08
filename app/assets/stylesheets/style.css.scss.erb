@@ -18,7 +18,7 @@ a {text-decoration:none;}
 
 body {line-height:18px; color:#7b7b7b; font-size:12px; font-family:'Open Sans', sans-serif; margin:0px 0; background:#f5faff;}
 
-.skyarea {background:url(/assets/sky.jpg) top center no-repeat fixed; background-size:cover; min-height:760px; overflow:hidden;}
+.skyarea {background:url('<%= asset_path("sky.jpg") %>') top center no-repeat fixed; background-size:cover; min-height:760px; overflow:hidden;}
 
 @keyframes move-twink-back {
     from {background-position:0 0;}
@@ -66,7 +66,7 @@ body {line-height:18px; color:#7b7b7b; font-size:12px; font-family:'Open Sans', 
 }
 
 .stars {
-  background:url(..//assets/stars.png) repeat top center;
+  background:url('<%= asset_path("stars.png") %>') repeat top center;
   z-index:0;
 }
 
@@ -81,7 +81,7 @@ body {line-height:18px; color:#7b7b7b; font-size:12px; font-family:'Open Sans', 
 }
 
 .clouds{
-    background:transparent url(..//assets/clouds.png) repeat top center;
+    background:transparent url('<%= asset_path("clouds.png") %>') repeat top center;
     z-index:1;
 
   -moz-animation:move-clouds-back 150s linear infinite;
@@ -161,7 +161,7 @@ body {line-height:18px; color:#7b7b7b; font-size:12px; font-family:'Open Sans', 
 
 .sun {width:100%; position:absolute; top:0px; left:0px; z-index:1;}
 
-.sun .star {width:900px; height:720px; background:url(..//assets/rays.png) no-repeat center center; background-size:cover; border-radius:0;
+.sun .star {width:900px; height:720px; background:url('<%= asset_path("rays.png") %>') no-repeat center center; background-size:cover; border-radius:0;
 margin:0 auto; animation:spinsun 80s infinite linear; z-index:9999;}
 
 .navouter {width:100%; height:55px; background:#ffffff; margin:0px auto; padding:0 0; -webkit-box-shadow:0 2px 3px 0 rgba(227, 227, 227, 1); -moz-box-shadow:0 2px 3px 0 rgba(227, 227, 227, 1); -ms-box-shadow:0 2px 3px 0 rgba(227, 227, 227, 1); -o-box-shadow:0 2px 3px 0 rgba(227, 227, 227, 1); box-shadow:0 2px 3px 0 rgba(227, 227, 227, 1);}
