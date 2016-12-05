@@ -1,0 +1,22 @@
+<div class="row">
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+   	   <h1>Art </h1>
+   </div>
+</div>
+
+<div class="row topsp">
+<% @exhibitions.each do |exhibition|%>
+  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"> 
+     <div class="perbox">
+        <% unless exhibition.pictures.blank? %>
+          <%= image_tag exhibition.pictures.first.picture(:medium) %>
+        <% end %>
+          <div class="txtbox">
+            <%= truncate(exhibition.title, length: 50) %> 
+            <br> <br>
+            <%= link_to '<button type="button" class="btn btn-default">View Gallery</button>'.html_safe, exhibition_path(exhibition) %>
+          </div>
+     </div>
+  </div>
+<% end -%>  
+</div> 

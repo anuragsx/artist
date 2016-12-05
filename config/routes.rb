@@ -21,5 +21,7 @@ Rails.application.routes.draw do
 
   get 'latest_news' => 'home#latest_news'
 
+  get 'art' => 'home#art'
+
   root 'home#index'
 end

@@ -1,9 +1,9 @@
 class Picture < ApplicationRecord
-	belongs_to :gallery
+	belongs_to :exhibition, optional: true
 
-	has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
-  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+	  has_attached_file :picture,
+	  	styles: { medium: "300x300>", thumb: "100x100>" }
 
 
-  do_not_validate_attachment_file_type :image
+	  do_not_validate_attachment_file_type :picture
 end

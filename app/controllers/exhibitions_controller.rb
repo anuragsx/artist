@@ -15,20 +15,28 @@ class ExhibitionsController < ApplicationController
   # GET /exhibitions/new
   def new
     @exhibition = Exhibition.new
+    3.times {@exhibition.pictures.build} # added this
   end
 
   # GET /exhibitions/1/edit
   def edit
+    3.times { @exhibition.pictures.build } # ... and this
   end
 
   # POST /exhibitions
   # POST /exhibitions.json
   def create
     @exhibition = Exhibition.new(exhibition_params)
-
+    puts "----------------"
+    puts @exhibition.pictures.inspect
     respond_to do |format|
       if @exhibition.save
-        format.html { redirect_to @exhibition, notice: 'Exhibition was successfully created.' }
+        #if params[:images]
+         # params[:images].each { |image|
+          #  @exhibition.pictures.create(image: image)
+          #}
+        #end
+        format.html { redirect_to exhibitions_path, notice: 'Exhibition was successfully created.' }
         format.json { render :show, status: :created, location: @exhibition }
       else
         format.html { render :new }
@@ -42,7 +50,7 @@ class ExhibitionsController < ApplicationController
   def update
     respond_to do |format|
       if @exhibition.update(exhibition_params)
-        format.html { redirect_to @exhibition, notice: 'Exhibition was successfully updated.' }
+        format.html { redirect_to exhibitions_path, notice: 'Exhibition was successfully updated.' }
         format.json { render :show, status: :ok, location: @exhibition }
       else
         format.html { render :edit }
@@ -69,6 +77,6 @@ class ExhibitionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exhibition_params
-      params.require(:exhibition).permit(:title, :exhibition_by, :address, :from_data, :to_date)
+      params.require(:exhibition).permit(:title, :exhibition_by, :address, :from_data, :to_date, :description, :id, pictures_attributes: [:picture, :exhibition_id])
     end
 end

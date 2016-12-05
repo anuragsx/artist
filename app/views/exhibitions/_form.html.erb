@@ -1,42 +1,52 @@
-<%= form_for(exhibition) do |f| %>
-  <% if exhibition.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(exhibition.errors.count, "error") %> prohibited this exhibition from being saved:</h2>
-
-      <ul>
-      <% exhibition.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <h1><%= params[:action] %> Exibhition</h1>
   </div>
+</div>
+<div class="row topsp">
+  <div class="loginform">
+  <%# @url = params[:action]=='new' %>
+  <%= form_for @exhibition, html: { multipart: true } do |f| %>
+      <% if exhibition.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(exhibition.errors.count, "error") %> prohibited this news from being saved:</h2>
 
-  <div class="field">
-    <%= f.label :exhibition_by %>
-    <%= f.text_field :exhibition_by %>
-  </div>
+          <ul>
+          <% exhibition.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>    
+      <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-30">
+      
+        <%#= f.file_field "images[]", type: :file, multiple: true %>   
+        <%= f.fields_for :pictures do |builder| %>
+          <%= builder.file_field :picture %>
+        <% end %>           
 
-  <div class="field">
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
+        <div class="inputxt">Title :</div>
+          <%= f.text_field :title, autofocus: true %>
+        <br class="clear" />
 
-  <div class="field">
-    <%= f.label :from_data %>
-    <%= f.text_field :from_data %>
-  </div>
+        <div class="inputxt">Address :</div>
+          <%= f.text_area :address, size: "35x3", autofocus: true %>
+        <br class="clear" />
 
-  <div class="field">
-    <%= f.label :to_date %>
-    <%= f.text_field :to_date %>
-  </div>
+        <div class="inputxt">Start Date:</div>
+          <%= f.text_field :from_data, autofocus: true %>
+        <br class="clear" />
 
-  <div class="actions">
-    <%= f.submit %>
+        <div class="inputxt">End Date:</div>
+          <%= f.text_field :to_date, autofocus: true %>
+        <br class="clear" />
+
+        <div class="inputxt">Description :</div>
+          <%= f.text_area :description, size: "35x3", autofocus: true %>
+        <br class="clear" />
+      
+        <%= f.submit %>        
+      </div>
+    <% end -%>
   </div>
-<% end %>
+</div>

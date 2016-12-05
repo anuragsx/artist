@@ -38,6 +38,10 @@ class HomeController < ApplicationController
 		@news = News.all
 	end	
 
+	def art
+		@exhibitions = Exhibition.all
+	end	
+
   private
 
   def resolve_layout
