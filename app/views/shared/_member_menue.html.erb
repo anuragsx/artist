@@ -6,15 +6,20 @@
               </div>
               <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6">
                   <ul class="toprgt">
-<!--                       <li><a href="#">Sign in </a> /</li>
-                      <li><a href="#">Register</a><li> -->
+                      <li>
+                        <% if user_signed_in? %>
+                            Signed in as <%= current_user.email %>.|
+                            <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+                        <% end %> 
+                      </li>
                   </ul>
               </div>
           </div>
        </div>
   </div>
 
-  <div class="navouter">
+
+<div class="navouter">
         <div class="container">
            <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
@@ -32,7 +37,7 @@
                                           <div class="nav navbar-nav">
                                              <div>
                                                 <ul>
-                                                  <%= render 'shared/menu_items'%>     
+                                                  <li><%#= link_to "Subscribe", pages_path %></li>
                                                 </ul>
                                              </div>
                                           </div>
@@ -42,4 +47,4 @@
                   </div>
            </div>
         </div>
-    </div>
+    </div> 

@@ -8,7 +8,7 @@
                   <ul class="toprgt">
                       <li>
                         <% if user_signed_in? %>
-                            Signed in as <%= current_user.email %>. This cannot be cheese? |
+                            Signed in as <%= current_user.email %>.|
                             <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
                         <% end %> 
                       </li>

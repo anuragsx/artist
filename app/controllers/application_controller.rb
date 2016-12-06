@@ -3,7 +3,13 @@ class ApplicationController < ActionController::Base
 
 
   def after_sign_in_path_for(resource)
-    admin_path
+  	#puts "-----------------"
+  	#puts resource.inspect
+  	if resource.id == 1
+    	admin_path
+	else
+		member_path
+	end
   end
 	
 end

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
 	get 'admin', to: 'admin#index'
 
+  get 'member', to: 'member#index'
+
 	#get 'store' => 'home#page'
 
 	get 'store' => 'home#store'

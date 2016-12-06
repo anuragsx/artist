@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lucien Dante</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', 'bootstrap', 'animate.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> 
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sanchez:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik+One" rel="stylesheet">
+    
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/blueimp-gallery.min.css" rel="stylesheet">
+    
+    <link type="text/css" href="css/style.css" rel="stylesheet" media="screen" />
+    <link type="text/css" href="css/responsive.css" rel="stylesheet" media="screen" />      
+     
+</head>
+
+<body>
+
+<%= render 'shared/member_menue'%> 
+
+<div class="container contentarea">
+  <%= yield %>
+</div>
+
+<%= render 'shared/main_footer'%>    
+     
+<!--  Javascript 
+=================================-->   
+<script src="js/jquery1.11.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
