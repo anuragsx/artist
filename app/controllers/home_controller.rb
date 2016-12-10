@@ -42,6 +42,10 @@ class HomeController < ApplicationController
 		@exhibitions = Exhibition.all
 	end	
 
+	def video_page
+		@videos = Video.all
+	end		
+
   private
 
   def resolve_layout

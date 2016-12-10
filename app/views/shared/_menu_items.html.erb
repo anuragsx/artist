@@ -8,7 +8,7 @@
   <a href="#">MUSIC </a>
 </li>         
 <li class="<%= selected_class(params, 'video') %>">
-  <a href="#">VIDEO </a>
+  <%= link_to 'VIDEO', video_page_path %>
 </li>        
 <li class="<%= selected_class(params, 'tour') %>">
 	<%= link_to 'TOUR', tour_path %>

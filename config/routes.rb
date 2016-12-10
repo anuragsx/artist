@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :videos
   resources :exhibitions
   resources :news
 
@@ -24,6 +25,8 @@ Rails.application.routes.draw do
   get 'latest_news' => 'home#latest_news'
 
   get 'art' => 'home#art'
+
+  get 'video_page' => 'home#video_page'
 
   root 'home#index'
 end

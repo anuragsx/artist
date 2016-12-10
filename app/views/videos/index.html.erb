@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <h1>Videos</h1>
+  </div>
+</div>
+
+<br>
+
+<p id="notice"><%= notice %></p>
+
+<br>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>URL</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @videos.each do |video| %>
+        <tr>
+          <td><%= video.url %></td>
+          <td><%= link_to '<span class="glyphicon glyphicon-pencil"></span>'.html_safe, edit_video_path(video) %></td>
+          <td><%= link_to '<span class="glyphicon glyphicon-remove"></span>'.html_safe, video, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to '<button type="button" class="btn btn-primary active">New Video URL</button>'.html_safe, new_video_path %>
