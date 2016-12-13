@@ -44,7 +44,11 @@ class HomeController < ApplicationController
 
 	def video_page
 		@videos = Video.all
-	end		
+	end	
+
+	def biography
+		@bio = Bio.first
+	end			
 
   private
 
