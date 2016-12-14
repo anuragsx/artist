@@ -34,6 +34,10 @@ class HomeController < ApplicationController
 		@page = Page.find_by_title(params[:action])
 	end	
 
+	def music
+		@page = Page.find_by_title(params[:action])
+	end	
+
 	def latest_news
 		@news = News.all
 	end	

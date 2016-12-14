@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
 	get 'fanwall' => 'home#fanwall'
 
+  get 'music' => 'home#music'
+
   get 'latest_news' => 'home#latest_news'
 
   get 'art' => 'home#art'
